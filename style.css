@@ -24,6 +24,7 @@ header {
     align-items: center;
     border-bottom: 1px solid #444;
     z-index: 1000; /* Ensure header is on top */
+    flex-wrap: wrap;
 }
 header nav {
     margin-right: 30px; /* Move navigation to the left */
@@ -84,6 +85,10 @@ header nav ul li:not(:last-child)::after {
 }
 header nav ul li a.active {
     color: #f39c12;
+}
+section {
+    width: 100%;
+    padding: 20px;
 }
 #main-content {
     margin-top: 70px; /* Adjusted margin-top to align with the shorter header */
@@ -295,4 +300,73 @@ header nav ul li a.active {
     background-color: white;
     color: #333;
     transform: translateY(-3px); /* Lift effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    header #profile {
+        margin: 10px 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        padding-top: 10px;
+    }
+
+    #main-content h1 {
+        font-size: 2em;
+    }
+
+    #main-content h2 {
+        font-size: 1.2em;
+    }
+
+    #main-content p {
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    .arrow-down {
+        margin-top: 60px;
+    }
+
+    #tooling h2, #projects h2, #contact h2, #fields-of-interest h2 {
+        font-size: 1.5em;
+    }
+
+    #tooling ul {
+        gap: 10px;
+    }
+
+    #tooling ul li {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    #projects .project {
+        padding: 16px;
+        font-size: 0.9em;
+    }
+
+    .card {
+        width: 200px;
+        padding: 16px;
+    }
+
+    #contact p {
+        font-size: 1em;
+    }
 }
